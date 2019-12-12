@@ -15,7 +15,11 @@ class HomeController extends Controller
         $cars = Car::all();
 
     	if($request->session()->has('uname')){
-    		return view('home.index')->with('catagories', $catagories)
+    		$id = session('uid');
+    		$user = User::where('id', $id)
+    				->first();
+    		return view('home.index')->with('user', $user)
+    		                         ->with('catagories', $catagories)
                                      ->with('cars', $cars);
     	}else{
     		return redirect('/login');

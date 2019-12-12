@@ -9,8 +9,8 @@
 					{{csrf_field()}}
 				  	<legend>Login</legend>
 				  	<div class="form-group">
-				    <label for="userName">User Name</label>
-				    <input type="text" class="form-control" name="userName" id="username" placeholder="User Name">
+				    <label for="username">User Name</label>
+				    <input type="text" class="form-control" name="username" id="username" placeholder="User Name">
 				  </div>
 				  <div class="form-group">
 				    <label for="password">Password</label>

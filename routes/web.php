@@ -26,6 +26,9 @@ Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/userlist', 'AdminController@userlist')->name('admin.userlist');
 Route::get('/user/delete/{id}', 'AdminController@delete')->name('user.delete');
 Route::get('/profile/{id}', 'AdminController@profileView')->name('admin.profileView');
+Route::get('/profile/edit/{id}', 'AdminController@profileEdit')->name('admin.profileEdit');
+Route::post('/profile/edit/{id}', 'AdminController@profileUpdate');
+
 
 Route::get('/addCar', 'CarController@add')->name('car.add');
 Route::post('/addCar', 'CarController@store');

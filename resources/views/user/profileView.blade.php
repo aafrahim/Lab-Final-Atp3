@@ -26,7 +26,7 @@
 				<tr>
 					<th>Password</td>
 					<td>:</td>
-					<td>{{$user->dob}}</td>
+					<td>{{$user->password}}</td>
 				</tr>
 				<tr>
 					<th>Address</td>
@@ -52,7 +52,7 @@
 					<th></td>
 					<td>:</td>
 					<td>
-						<a href="#" class="btn btn-primary" role="button">Edit</a>
+						<a href="{{route('admin.profileEdit', $user->id)}}" class="btn btn-primary" role="button">Edit</a>
 					</td>
 				</tr>
 			</table>
